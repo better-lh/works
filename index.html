@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>首页</title>
+    <meta charset="utf-8"/>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+<div class="top">
+    <div class="topcon">
+        <img class="logo" src="images/logo_02.png" alt=""/>
+        <div class="nav">
+            <a href="/" class="checked">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#exp">EXPERIENCE</a>
+            <a href="#workshow">WORKS SHOW</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="banner">
+        <div class="bannerlist">
+            <img src="images/banner.jpg" alt="" />
+            <img src="images/banner1.jpg" alt="" />
+            <img src="images/banner2.jpg" alt="" />
+        </div>
+        <div class="info">
+            <img src="images/liuhua.png"/>
+        </div>
+        <div class="navtools">
+            <div class="navleft" onclick="playPre();"></div>
+            <div class="navright" onclick="playNext();"></div>
+        </div>
+        <div class="point">
+            <i class="checked"></i>
+            <i></i>
+            <i></i>
+        </div>
+    </div>
+    <div class="about" id="about">
+        <div class="con">
+            <div class="eng">
+                ABOUT ME
+            </div>
+            <div class="zh">关于我</div>
+            <img src="images/touxiang_03.png" class="avatar" alt=""/>
+            <div class="uinfo">
+                <div class="username">
+                    刘化
+                </div>
+                <div class="age">
+                    27岁
+                </div>
+                <div class="edu">
+                    武汉大学
+                </div>
+                <div class="major">
+                    行政管理
+                </div>
+                <div class="city">
+                    武汉
+                </div>
+            </div>
+            <div class="eng">
+                SKILL
+            </div>
+            <div class="zh">技能</div>
+            <div class="skill">
+                <img src="images/ps_24.png"/>
+                <img src="images/dw_27.png"/>
+                <img src="images/ai_30.png"/>
+                <img src="images/ax_33.png"/>
+            </div>
+        </div>
+    </div>
+    <div class="exp" id="exp">
+        <img src="images/experience_02.png"/>
+    </div>
+    <div class="workshow" id="workshow">
+        <div class="con">
+            <div class="eng">
+                WORKS SHOWS
+            </div>
+            <div class="zh">作品展示</div>
+            <div class="tabs">
+                <div class="item checked">网页WEB</div>
+                <div class="item">图标ICON</div>
+                <div class="item">软件APP</div>
+            </div>
+            <div class="tabcon" style="display: block;">
+                <img src="images/haibao1_39.png" alt=""/>
+                <img src="images/haibao2_39.png" alt=""/>
+                <img src="images/haibao3_39.png" alt=""/>
+                <img src="images/haibao4_39.png" alt=""/>
+                <img src="images/haibao5_39.png" alt=""/>
+                <img src="images/haibao6_39.png" alt=""/>
+            </div>
+            <div class="tabcon">
+                <img src="images/haibao2_39.png" alt=""/>
+                <img src="images/haibao1_39.png" alt=""/>
+                <img src="images/haibao5_39.png" alt=""/>
+                <img src="images/haibao4_39.png" alt=""/>
+                <img src="images/haibao3_39.png" alt=""/>
+                <img src="images/haibao6_39.png" alt=""/>
+            </div>
+            <div class="tabcon">
+                <img src="images/haibao6_39.png" alt=""/>
+                <img src="images/haibao2_39.png" alt=""/>
+                <img src="images/haibao4_39.png" alt=""/>
+                <img src="images/haibao5_39.png" alt=""/>
+                <img src="images/haibao1_39.png" alt=""/>
+                <img src="images/haibao3_39.png" alt=""/>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact" id="contact">
+        <div class="eng">
+            CONTACT ME
+        </div>
+        <div class="zh">与我联系</div>
+        <div class="info">
+            <div class="tel">1888888888</div>
+            <div class="qq">794298136</div>
+            <div class="weixin">A8888888</div>
+        </div>
+        <div class="copyright">COPYRIGHT SIFANG ART MUSEUM &copy;  ALL RIGHTS RESERVED 2017</div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/jquery/2.0.1/jquery.min.js"></script>
+<script>
+    var currentIndex = 0;
+    var width = window.screen.width;
+    $(function() {
+        $('.tabs .item').click(function () {
+            $(this).addClass('checked').siblings().removeClass('checked');
+            var index = $(this).index();
+            $('.tabcon').hide();
+            $('.tabcon').eq(index).show();
+        });
+
+        $('.nav a').click(function() {
+            $(this).addClass('checked').siblings().removeClass('checked');
+        });
+        initBanner();
+
+        $('.point i').click(function() {
+            $(this).addClass('checked').siblings().removeClass('checked');
+            playIndex($(this).index());
+        })
+
+    })
+    var initBanner= function() {
+        var imgs = $('.bannerlist img').clone();
+        currentIndex = 3;
+        $('.bannerlist').append(imgs).css({ 'margin-left': '-' + currentIndex * width + 'px' });
+       // setInterval(playNext, 1500);
+    }
+  
+    var playNext = function () {
+        currentIndex++;
+        $('.bannerlist').animate({
+            'margin-left': '-' + width * currentIndex + 'px'
+        }, function () {
+            if (currentIndex == 5) {
+                currentIndex = 2;
+                $('.bannerlist').css({ 'margin-left': '-' + currentIndex * width + 'px' });
+            }
+        });
+    }
+    var playPre = function () {
+        currentIndex--;
+        $('.bannerlist').animate({
+            'margin-left': '-' + width * currentIndex + 'px'
+        }, function() {
+            if (currentIndex == 1) {
+                currentIndex = 4;
+                $('.bannerlist').css({ 'margin-left': '-' + currentIndex * width + 'px' });
+            }
+        });
+    }
+    var playIndex= function(index) {
+        currentIndex = index;
+        $('.bannerlist').animate({
+            'margin-left': '-' + width * currentIndex + 'px'
+        });
+    }
+</script>
+</body>
+</html>

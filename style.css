@@ -1,0 +1,265 @@
+﻿*{
+    padding:0;margin:0;list-style:none;
+    text-decoration: none;
+    font-family: '微软雅黑',Arial;
+    font-size: 12px;
+}
+a {
+    color: #000;
+}
+.logo {
+    display: block;
+    float: left;
+    padding-top: 7px;
+}
+.bannerlist {
+    width: 1000%;
+}
+.bannerlist img {
+    float: left;
+    display: block;
+}
+.top {
+    background: #4d4846;
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.topcon {
+    width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+}
+.topcon .nav {
+    float: right;
+}
+.topcon .nav a.checked {
+    color: #f84428;
+}
+.topcon .nav a {
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 12px;
+}
+.container {
+    padding-top: 40px;
+}
+.banner {
+    width: 100%;
+    height: 948px;
+    overflow: hidden;
+    position: relative;
+}
+.banner .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: -195px;
+}
+.navtools {
+    width: 1200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -600px;
+}
+.navleft {
+    background: url('images/pre_next.png') no-repeat center;
+   background-position: 0px 11px;
+    width: 35px;
+    height: 45px;
+    margin-top: -12px;
+    float: left;
+}
+.navright{
+    background: url('images/pre_next.png') no-repeat center;
+   background-position: 0px -34px;
+    width: 35px;
+    height: 45px;
+    float: right;
+}
+.point {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -18px;
+}
+.point i {
+    width: 10px;
+    display: inline-block;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.point i.checked {
+    background: #4d4846;
+}
+.about {
+    width: 100%;
+    background: #f9efde;
+}
+.about .con {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+ .eng {
+    font-size: 36px;
+    font-weight: bold;
+    color: #000;
+    padding-top: 60px;
+}
+ .zh {
+    padding-top: 20px;
+    font-size: 24px;
+}
+.about .avatar {
+    padding-top: 20px;
+}
+.uinfo {
+    padding-top: 80px;
+}
+.uinfo div {
+    display: inline-block;
+    margin: 0 55px;
+    padding: 0 10px;
+}
+.uinfo .username {
+    background: url('images/xiaoliantubiao_07.png') no-repeat top;
+    background-size: 48px;
+    padding-top: 48px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.uinfo .age {
+    background: url('images/shizhong_14.png') no-repeat top;
+    background-size: 48px;
+    padding-top: 48px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.uinfo .edu {
+    background: url('images/daxue-_07.png') no-repeat top;
+    background-size: 48px;
+    padding-top: 48px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.uinfo .major {
+    background: url('images/tuxiang_09.png') no-repeat top;
+    background-size: 48px;
+    padding-top: 48px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.uinfo .city {
+    background: url('images/dingwei_11.png') no-repeat top;
+    background-size: 48px;
+    padding-top: 48px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.skill {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+.exp {
+    width: 100%;
+    overflow: hidden;
+}
+.exp img {
+    width: 100%;
+}
+
+.workshow {
+    width: 100%;
+    background: #fffefe;
+    padding-bottom: 70px;
+}
+.workshow .con {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.workshow .tabs {
+       display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    padding-top: 110px;
+    font-size: 24px;
+    padding-bottom: 40px;
+}
+.workshow .tabs .item.checked {
+    border-bottom: 2px solid #000;
+}
+.tabcon {
+           /*display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;*/
+    width: 1200px;
+    margin: 0 auto;
+    display: none;
+}
+.tabcon img {
+    margin-right: 30px;
+    margin-top: 30px;
+    width: 348px;
+    height: 238px;
+}
+.tabcon img:nth-child(3n+1) {
+    padding-left: 36px;
+}
+
+.contact {
+    width: 100%;
+    background: #4c3c63;
+    text-align: center;
+    color: #fff !important;
+}
+
+.contact .eng {
+    color: #fff !important;
+    
+}
+.contact .info {
+    padding-top: 96px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    width: 750px;
+    margin: 0 auto;
+    padding-bottom: 140px;
+}
+.contact .info div {
+    font-size: 24px;
+}
+.tel {
+    background: url('images/shouji_59.png') no-repeat top;
+    background-size: 60px;
+    padding-top: 90px;
+}
+.qq {
+    background: url('images/qq_59.png') no-repeat top;
+    background-size: 60px;
+    padding-top: 90px;
+}
+.weixin {
+    background: url('images/weiixn-_59.png') no-repeat top;
+    background-size: 60px;
+    padding-top: 90px;
+}
+
+.copyright {
+    height: 40px;
+    line-height: 40px;
+}
